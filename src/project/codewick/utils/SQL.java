@@ -1,9 +1,7 @@
 package project.codewick.utils;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.sql.Statement;
+import javax.xml.transform.Result;
+import java.sql.*;
 
 public enum SQL {
     utils;
@@ -67,5 +65,45 @@ public enum SQL {
             e.printStackTrace();
         }
         return true;
+    }
+
+
+
+
+    //FOR LOGIN SYSTEM::
+
+    public boolean containsUser(String key,String table){
+        Connection c = connect();
+        try {
+            Statement s = c.createStatement();
+            ResultSet rs = s.executeQuery("Select userID from " + table + " where userID = \"" + key+"\";");
+            rs.next();
+            if(rs.getString(1).equals(key)){
+                c.close();
+                return true;
+            }
+            c.close();
+            return false;
+        } catch (SQLException e) {
+            return false;
+        }
+
+    }
+
+    public boolean passwordMatches(String username,String password,String table){
+        Connection c = connect();
+        try {
+            Statement s = c.createStatement();
+            ResultSet rs = s.executeQuery("select pass from " + table + " where userID = \""+username+"\"");
+            rs.next();
+            if(rs.getString(1).equals(password) ){
+                c.close();
+                return true;
+            }
+            return false;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
     }
 }

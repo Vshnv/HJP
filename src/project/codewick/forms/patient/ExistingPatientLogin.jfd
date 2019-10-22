@@ -4,8 +4,8 @@ new FormModel {
 	contentType: "form/swing"
 	root: new FormRoot {
 		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-			"$horizontalGroup": "par l {seq {space :p:32:p, par t {seq {comp button1:::p::p, space :::p, comp button2:::p::p}, seq {par t {comp label2:::p::p, comp label1:::p::p}, space s:::p, par l:::p {comp textField1::::281:x, comp passwordField1::::281:x}}}, space ::17:x}}"
-			"$verticalGroup": "par l {seq l {space :p:38:p, par b {comp textField1::b:p::p, comp label1::b:p::p}, space :p:32:p, par b {comp label2::b:p::p, comp passwordField1::b:p::p}, space s:::p, par b {comp button2::b:p::p, comp button1::b:p::p}, space ::10:x}}"
+			"$horizontalGroup": "par l {seq {space :p:32:p, par t {seq t {comp button1:::p::p, space :::p, comp button2:::p::p}, seq t {par t {comp label2:::p::p, comp label1:::p::p}, space s:::p, par t:::p {comp textField1::l::308:x, comp passwordField1::l::308:x, comp label3::l:p::p}}}, space :::x}}"
+			"$verticalGroup": "par l {seq l {space :p:10:p, comp label3:::p::p, space u:::p, par b {comp textField1::b:p::p, comp label1::b:p::p}, space :p:32:p, par b {comp label2::b:p::p, comp passwordField1::b:p::p}, space s:::p, par b {comp button2::b:p::p, comp button1::b:p::p}, space ::26:x}}"
 		} ) {
 			name: "this"
 			"title": "Patient Login"
@@ -32,9 +32,12 @@ new FormModel {
 			add( new FormComponent( "javax.swing.JPasswordField" ) {
 				name: "passwordField1"
 			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label3"
+			} )
 		}, new FormLayoutConstraints( null ) {
 			"location": new java.awt.Point( 0, 0 )
-			"size": new java.awt.Dimension( 400, 220 )
+			"size": new java.awt.Dimension( 420, 220 )
 		} )
 	}
 }

@@ -4,6 +4,8 @@
 
 package project.codewick.forms.patient;
 
+import project.codewick.utils.SQL;
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -19,7 +21,14 @@ public class ExistingPatientLogin extends JFrame {
 
     private void button1MouseClicked(MouseEvent e) {
         String user = textField1.getText();
+        if(!SQL.utils.containsUser(user,"patientlogin")){
+            label3.setText("Could not find user :: " + user);
+            return;
+        }
         String password = String.valueOf(passwordField1.getPassword());
+        if(SQL.utils.passwordMatches(user,password,"patientlogin")){
+            label3.setText("Password matched");
+        }
     }
 
     private void initComponents() {
@@ -31,6 +40,7 @@ public class ExistingPatientLogin extends JFrame {
         button1 = new JButton();
         button2 = new JButton();
         passwordField1 = new JPasswordField();
+        label3 = new JLabel();
 
         //======== this ========
         setTitle("Patient Login");
@@ -70,15 +80,18 @@ public class ExistingPatientLogin extends JFrame {
                                 .addComponent(label2)
                                 .addComponent(label1))
                             .addGap(18, 18, 18)
-                            .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
-                                .addComponent(textField1, GroupLayout.DEFAULT_SIZE, 281, Short.MAX_VALUE)
-                                .addComponent(passwordField1, GroupLayout.DEFAULT_SIZE, 281, Short.MAX_VALUE))))
-                    .addContainerGap(17, Short.MAX_VALUE))
+                            .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(textField1, GroupLayout.Alignment.LEADING, GroupLayout.DEFAULT_SIZE, 308, Short.MAX_VALUE)
+                                .addComponent(passwordField1, GroupLayout.Alignment.LEADING, GroupLayout.DEFAULT_SIZE, 308, Short.MAX_VALUE)
+                                .addComponent(label3, GroupLayout.Alignment.LEADING))))
+                    .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         contentPaneLayout.setVerticalGroup(
             contentPaneLayout.createParallelGroup()
                 .addGroup(contentPaneLayout.createSequentialGroup()
-                    .addGap(38, 38, 38)
+                    .addGap(10, 10, 10)
+                    .addComponent(label3)
+                    .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
                     .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
                         .addComponent(textField1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
                         .addComponent(label1))
@@ -90,7 +103,7 @@ public class ExistingPatientLogin extends JFrame {
                     .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
                         .addComponent(button2)
                         .addComponent(button1))
-                    .addContainerGap(10, Short.MAX_VALUE))
+                    .addContainerGap(26, Short.MAX_VALUE))
         );
         pack();
         setLocationRelativeTo(getOwner());
@@ -105,5 +118,6 @@ public class ExistingPatientLogin extends JFrame {
     private JButton button1;
     private JButton button2;
     private JPasswordField passwordField1;
+    private JLabel label3;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
 }
