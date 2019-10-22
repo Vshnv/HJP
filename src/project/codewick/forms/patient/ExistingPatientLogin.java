@@ -28,6 +28,8 @@ public class ExistingPatientLogin extends JFrame {
         String password = String.valueOf(passwordField1.getPassword());
         if(SQL.utils.passwordMatches(user,password,"patientlogin")){
             label3.setText("Password matched");
+        }else{
+            label3.setText("incorrect Password");
         }
     }
 

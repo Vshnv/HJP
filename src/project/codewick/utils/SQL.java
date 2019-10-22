@@ -22,11 +22,11 @@ public enum SQL {
         this.password = password;
         this.database = database;
     }
-    public boolean insertValue(String database,String table,String[] columns) {
+    public boolean insertValue(String table,String[] columns) {
         Connection c = connect();
         try {
             Statement s = c.createStatement();
-            s.execute("insert into " + table + " values"+columns.toString().replace("{","(").replace("}",")")+";");
+            s.execute("insert into " + table + " values"+buildArgs(columns)+";");
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -43,6 +43,11 @@ public enum SQL {
             e.printStackTrace();
         }
         return true;
+    }
+
+    public boolean addPatient(String userID,String name,int age, char sex, String nationality , String DOB, String phone, String email,String address){
+        String[] params ={userID,name,age+"",sex+"",nationality,DOB,phone,email,address};
+        return insertValue("patients",params);
     }
     public boolean modify(String kname,String key,String column,String value){
         Connection c = connect();
@@ -105,5 +110,17 @@ public enum SQL {
             e.printStackTrace();
         }
         return false;
+    }
+
+
+    private String buildArgs(String[] params){
+        StringBuilder s = new StringBuilder();
+        s.append("(");
+        for(String str:params){
+            s.append("\""+str+"\"");
+            s.append(",");
+        }
+        s.append("-");
+        return s.toString().replace(",-",")");
     }
 }

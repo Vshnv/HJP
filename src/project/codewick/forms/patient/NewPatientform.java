@@ -4,6 +4,8 @@
 
 package project.codewick.forms.patient;
 
+import project.codewick.utils.SQL;
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -18,8 +20,25 @@ public class NewPatientform extends JFrame {
     }
 
     private void button1MouseClicked(MouseEvent e) {
-        String name = textField1.getText();
-        int age = Integer.parseInt(textField2.getText());
+        try {
+            String name = textField1.getText();
+            int age = Integer.parseInt(textField2.getText());
+            char sex = 'M';//TODO:: ADD
+            String nationality = textField4.getText();
+            String DOB = textField5.getText();
+            String phone = textField6.getText();
+            String email = textField7.getText();
+            String localadd = textField8.getText();
+            String userID = textField9.getText();
+            String pass = String.valueOf(passwordField1.getPassword());
+            SQL.utils.addPatient(userID,name,age,sex,nationality,DOB,phone,email,localadd);
+            String[] params = {userID,pass};
+            SQL.utils.insertValue("patientlogin",params);
+            label12.setText("Successfully register user = " +userID);
+        }catch (Exception ex){
+            label11.setText("all field must be filled for registration");
+            label12.setText("Failed registration. Try again");
+        }
     }
 
     private void initComponents() {
@@ -44,14 +63,16 @@ public class NewPatientform extends JFrame {
         label9 = new JLabel();
         label10 = new JLabel();
         textField9 = new JTextField();
-        textField10 = new JTextField();
         radioButton1 = new JRadioButton();
         radioButton2 = new JRadioButton();
         radioButton3 = new JRadioButton();
+        label11 = new JLabel();
+        passwordField1 = new JPasswordField();
+        label12 = new JLabel();
 
         //======== this ========
         setTitle("Patient Registration Form");
-        Container contentPane = getContentPane();
+        var contentPane = getContentPane();
 
         //---- button1 ----
         button1.setText("Register");
@@ -106,40 +127,37 @@ public class NewPatientform extends JFrame {
         contentPaneLayout.setHorizontalGroup(
             contentPaneLayout.createParallelGroup()
                 .addGroup(GroupLayout.Alignment.TRAILING, contentPaneLayout.createSequentialGroup()
-                    .addContainerGap(186, Short.MAX_VALUE)
+                    .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(button1)
-                    .addGap(174, 174, 174))
+                    .addGap(168, 168, 168))
                 .addGroup(contentPaneLayout.createSequentialGroup()
                     .addGap(34, 34, 34)
                     .addGroup(contentPaneLayout.createParallelGroup()
+                        .addComponent(label11, GroupLayout.DEFAULT_SIZE, 404, Short.MAX_VALUE)
                         .addGroup(contentPaneLayout.createSequentialGroup()
                             .addGroup(contentPaneLayout.createParallelGroup()
                                 .addComponent(label7)
                                 .addComponent(label8))
-                            .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addContainerGap())
                         .addGroup(GroupLayout.Alignment.TRAILING, contentPaneLayout.createSequentialGroup()
                             .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.TRAILING)
                                 .addGroup(contentPaneLayout.createSequentialGroup()
-                                    .addComponent(label10)
-                                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 62, Short.MAX_VALUE)
-                                    .addComponent(textField10, GroupLayout.PREFERRED_SIZE, 271, GroupLayout.PREFERRED_SIZE))
-                                .addGroup(contentPaneLayout.createSequentialGroup()
-                                    .addComponent(label9)
-                                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 75, Short.MAX_VALUE)
-                                    .addComponent(textField9, GroupLayout.PREFERRED_SIZE, 271, GroupLayout.PREFERRED_SIZE))
-                                .addGroup(contentPaneLayout.createSequentialGroup()
                                     .addGroup(contentPaneLayout.createParallelGroup()
-                                        .addComponent(label1)
-                                        .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.TRAILING)
-                                            .addComponent(label3)
-                                            .addComponent(label2, GroupLayout.PREFERRED_SIZE, 21, GroupLayout.PREFERRED_SIZE))
                                         .addGroup(contentPaneLayout.createSequentialGroup()
-                                            .addGap(3, 3, 3)
                                             .addGroup(contentPaneLayout.createParallelGroup()
-                                                .addComponent(label5, GroupLayout.PREFERRED_SIZE, 71, GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(label6)
-                                                .addComponent(label4))))
-                                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
+                                                .addComponent(label1)
+                                                .addGroup(contentPaneLayout.createSequentialGroup()
+                                                    .addGap(3, 3, 3)
+                                                    .addGroup(contentPaneLayout.createParallelGroup()
+                                                        .addComponent(label3)
+                                                        .addComponent(label5, GroupLayout.PREFERRED_SIZE, 71, GroupLayout.PREFERRED_SIZE)
+                                                        .addComponent(label6)
+                                                        .addComponent(label4))))
+                                            .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE))
+                                        .addGroup(GroupLayout.Alignment.TRAILING, contentPaneLayout.createSequentialGroup()
+                                            .addGap(0, 0, Short.MAX_VALUE)
+                                            .addComponent(label2, GroupLayout.PREFERRED_SIZE, 50, GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 62, Short.MAX_VALUE)))
                                     .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
                                         .addComponent(textField1, GroupLayout.DEFAULT_SIZE, 271, Short.MAX_VALUE)
                                         .addComponent(textField2, GroupLayout.DEFAULT_SIZE, 271, Short.MAX_VALUE)
@@ -153,8 +171,20 @@ public class NewPatientform extends JFrame {
                                             .addGap(18, 18, 18)
                                             .addComponent(radioButton2)
                                             .addGap(18, 18, 18)
-                                            .addComponent(radioButton3)))))
+                                            .addComponent(radioButton3))))
+                                .addGroup(contentPaneLayout.createSequentialGroup()
+                                    .addGroup(contentPaneLayout.createParallelGroup()
+                                        .addComponent(label9)
+                                        .addComponent(label10))
+                                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 62, Short.MAX_VALUE)
+                                    .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(textField9, GroupLayout.DEFAULT_SIZE, 271, Short.MAX_VALUE)
+                                        .addComponent(passwordField1, GroupLayout.DEFAULT_SIZE, 271, Short.MAX_VALUE))))
                             .addGap(21, 21, 21))))
+                .addGroup(contentPaneLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(label12, GroupLayout.DEFAULT_SIZE, 426, Short.MAX_VALUE)
+                    .addContainerGap())
         );
         contentPaneLayout.setVerticalGroup(
             contentPaneLayout.createParallelGroup()
@@ -164,10 +194,13 @@ public class NewPatientform extends JFrame {
                         .addComponent(label1)
                         .addComponent(textField1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
                     .addGap(18, 18, 18)
-                    .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                        .addComponent(label2, GroupLayout.PREFERRED_SIZE, 16, GroupLayout.PREFERRED_SIZE)
-                        .addComponent(textField2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-                    .addGap(18, 18, 18)
+                    .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
+                        .addGroup(contentPaneLayout.createSequentialGroup()
+                            .addComponent(textField2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                            .addGap(18, 18, 18))
+                        .addGroup(contentPaneLayout.createSequentialGroup()
+                            .addComponent(label2, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)))
                     .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
                         .addComponent(label3)
                         .addComponent(radioButton1)
@@ -200,10 +233,13 @@ public class NewPatientform extends JFrame {
                     .addGap(18, 18, 18)
                     .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
                         .addComponent(label10)
-                        .addComponent(textField10, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(passwordField1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                     .addComponent(button1)
-                    .addContainerGap())
+                    .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(label11, GroupLayout.PREFERRED_SIZE, 20, GroupLayout.PREFERRED_SIZE)
+                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(label12, GroupLayout.PREFERRED_SIZE, 18, GroupLayout.PREFERRED_SIZE))
         );
         pack();
         setLocationRelativeTo(getOwner());
@@ -231,9 +267,11 @@ public class NewPatientform extends JFrame {
     private JLabel label9;
     private JLabel label10;
     private JTextField textField9;
-    private JTextField textField10;
     private JRadioButton radioButton1;
     private JRadioButton radioButton2;
     private JRadioButton radioButton3;
+    private JLabel label11;
+    private JPasswordField passwordField1;
+    private JLabel label12;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
 }

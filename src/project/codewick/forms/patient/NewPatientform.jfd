@@ -4,8 +4,8 @@ new FormModel {
 	contentType: "form/swing"
 	root: new FormRoot {
 		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-			"$horizontalGroup": "par l {seq t {space ::186:x, comp button1:::p::p, space :p:174:p}, seq l {space :p:34:p, par l {seq {par l {comp label7::l:p::p, comp label8:::p::p}, space :::x}, seq t {par t {seq {comp label10:::p::p, space ::62:x, comp textField10:::p:271:p}, seq {comp label9:::p::p, space ::75:x, comp textField9:::p:271:p}, seq {par l {comp label1::l:p::p, par t:l {comp label3:::p::p, comp label2:::p:21:p}, seq l {space :p:3:p, par l {comp label5:::p:71:p, comp label6:::p::p, comp label4:::p::p}}}, space ::38:x, par l:::p {comp textField1::::271:x, comp textField2::l::271:x, comp textField4::l::271:x, comp textField5::::271:x, comp textField6::l::271:x, comp textField7::l::271:x, comp textField8::l::271:x, seq {comp radioButton1:::p::p, space s:::p, comp radioButton2:::p::p, space s:::p, comp radioButton3:::p::p}}}}, space :p:21:p}}}}"
-			"$verticalGroup": "par l {seq l {space :p:40:p, par b {comp label1::b:p::p, comp textField1::b:p::p}, space s:::p, par b {comp label2::b:p:16:p, comp textField2::b:p::p}, space s:::p, par b {comp label3::b:p::p, comp radioButton1::b:p::p, comp radioButton2::b:p::p, comp radioButton3::b:p::p}, space s:::p, par b {comp label4::b:p::p, comp textField4::b:p::p}, space s:::p, par b {comp label5::b:p::p, comp textField5::b:p::p}, space s:::p, par b {comp label6::b:p::p, comp textField6::b:p::p}, space s:::p, par b {comp label7::b:p::p, comp textField7::b:p::p}, space s:::p, par b {comp label8::b:p::p, comp textField8::b:p::p}, space s:::p, par b {comp label9::b:p::p, comp textField9::b:p::p}, space s:::p, par b {comp label10::b:p::p, comp textField10::b:p::p}, space :::x, comp button1:::p::p, space :::p}}"
+			"$horizontalGroup": "par l {seq t {space :::x, comp button1:::p::p, space :p:168:p}, seq l {space :p:34:p, par l {comp label11::l::404:x, seq {par l {comp label7::l:p::p, comp label8:::p::p}, space :::x}, seq t {par t {seq {par l {seq {par l {comp label1::l:p::p, seq {space :3:3:p, par l {comp label3::l:p::p, comp label5:::p:71:p, comp label6:::p::p, comp label4:::p::p}}}, space ::38:x}, seq t {space :0:0:x, comp label2:::p:50:p, space ::62:x}}, par l:::p {comp textField1::::271:x, comp textField2::l::271:x, comp textField4::l::271:x, comp textField5::::271:x, comp textField6::l::271:x, comp textField7::l::271:x, comp textField8::l::271:x, seq {comp radioButton1:::p::p, space s:::p, comp radioButton2:::p::p, space s:::p, comp radioButton3:::p::p}}}, seq t {par l {comp label9::l:p::p, comp label10::l:p::p}, space ::62:x, par l:::p {comp textField9::::271:x, comp passwordField1::::271:x}}}, space :p:21:p}}}, seq {space :::p, comp label12::::426:x, space :::p}}"
+			"$verticalGroup": "par l {seq l {space :p:40:p, par b {comp label1::b:p::p, comp textField1::b:p::p}, space s:::p, par l:::p {seq {comp textField2:::p::p, space :p:18:p}, seq {comp label2:::::x, space u:::p}}, par b {comp label3::b:p::p, comp radioButton1::b:p::p, comp radioButton2::b:p::p, comp radioButton3::b:p::p}, space s:::p, par b {comp label4::b:p::p, comp textField4::b:p::p}, space s:::p, par b {comp label5::b:p::p, comp textField5::b:p::p}, space s:::p, par b {comp label6::b:p::p, comp textField6::b:p::p}, space s:::p, par b {comp label7::b:p::p, comp textField7::b:p::p}, space s:::p, par b {comp label8::b:p::p, comp textField8::b:p::p}, space s:::p, par b {comp label9::b:p::p, comp textField9::b:p::p}, space s:::p, par b {comp label10::b:p::p, comp passwordField1::b:p::p}, space :::p, comp button1:::p::p, space u:::p, comp label11:::p:20:p, space :::x, comp label12:::p:18:p}}"
 		} ) {
 			name: "this"
 			"title": "Patient Registration Form"
@@ -78,9 +78,6 @@ new FormModel {
 			add( new FormComponent( "javax.swing.JTextField" ) {
 				name: "textField9"
 			} )
-			add( new FormComponent( "javax.swing.JTextField" ) {
-				name: "textField10"
-			} )
 			add( new FormComponent( "javax.swing.JRadioButton" ) {
 				name: "radioButton1"
 				"text": "Male"
@@ -93,9 +90,18 @@ new FormModel {
 				name: "radioButton3"
 				"text": "Other"
 			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label11"
+			} )
+			add( new FormComponent( "javax.swing.JPasswordField" ) {
+				name: "passwordField1"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label12"
+			} )
 		}, new FormLayoutConstraints( null ) {
-			"location": new java.awt.Point( 55, 15 )
-			"size": new java.awt.Dimension( 440, 555 )
+			"location": new java.awt.Point( 35, 20 )
+			"size": new java.awt.Dimension( 440, 615 )
 		} )
 	}
 }
