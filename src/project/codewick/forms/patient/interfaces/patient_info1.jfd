@@ -1,0 +1,99 @@
+JFDML JFormDesigner: "7.0.0.6.255" Java: "11.0.4" encoding: "UTF-8"
+
+new FormModel {
+	"i18n.autoExternalize": true
+	"i18n.bundlePackage": "project.codewick.forms.patient.interfaces"
+	"i18n.bundleName": "patient"
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq l {space :p:34:p, par t {seq t {space :0:38:x, comp label9:::p::p, space s:::p, comp comboBox1:::p::p, space :p:209:p}, seq t {par l {comp label3::l:p::p, seq l {space :p:3:p, par l {comp label5:::p:71:p, comp label6:::p::p, comp label4:::p::p, comp label7:::p::p, comp label8:::p::p}}, par t:l {comp label2::t:p:35:p, comp label1::l:p::p}}, space s:::p, par l {seq {par l {comp label23::t::261:x, comp label24::l:::x, comp label22::l:::x, comp label21::l::261:x}, space :18:18:p}, seq {par l:::p {comp label20::l::150:x, comp label19::l::150:x, comp label18::l::150:x, comp label17::l::150:x}, space ::129:x}}}}}, seq t {space ::167:x, comp toggleButton1:::p:94:p, space :p:177:p}}"
+			"$verticalGroup": "par l {seq l {space :::p, par b {comp label9::b:p::p, comp comboBox1::b:p::p}, space :p:21:p, par b {comp label1::b:p::p, comp label17::b:p::p}, space s:::p, par b {comp label2::b:p::p, comp label18::b:p::p}, space s:::p, par b {comp label3::b:p::p, comp label19::b:p::p}, space s:::p, par b {comp label4::b:p::p, comp label20::b:p::p}, space s:::p, par b {comp label5::b:p::p, comp label21::b:p::p}, space s:::p, par b {comp label6::b:p::p, comp label22::b:p::p}, space s:::p, par l {comp label7:::p::p, comp label23:::::x}, space u:::p, par b {comp label8::b:p::p, comp label24::b:p::p}, space :p:47:p, comp toggleButton1:::p::p, space ::149:x}}"
+		} ) {
+			name: "this2"
+			"title": new FormMessage( null, "this2.title" )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label1"
+				"text": new FormMessage( null, "label1.text" )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label2"
+				"text": new FormMessage( null, "label2.text" )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label3"
+				"text": new FormMessage( null, "label3.text" )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label4"
+				"text": new FormMessage( null, "label4.text" )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label5"
+				"text": new FormMessage( null, "label5.text" )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label6"
+				"text": new FormMessage( null, "label6.text" )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label7"
+				"text": new FormMessage( null, "label7.text" )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label8"
+				"text": new FormMessage( null, "label8.text" )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label9"
+				"text": new FormMessage( null, "label9.text" )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label17"
+				"text": new FormMessage( null, "label17.text" )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label18"
+				"text": new FormMessage( null, "label18.text" )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label19"
+				"text": new FormMessage( null, "label19.text" )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label20"
+				"text": new FormMessage( null, "label20.text" )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label21"
+				"text": new FormMessage( null, "label21.text" )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label22"
+				"text": new FormMessage( null, "label22.text" )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label23"
+				"text": new FormMessage( null, "label23.text" )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label24"
+				"text": new FormMessage( null, "label24.text" )
+			} )
+			add( new FormComponent( "javax.swing.JComboBox" ) {
+				name: "comboBox1"
+			} )
+			add( new FormComponent( "javax.swing.JToggleButton" ) {
+				name: "toggleButton1"
+				"text": new FormMessage( null, "toggleButton1.text" )
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "toggleButton1ActionPerformed", true ) )
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "toggleButton1ActionPerformed", true ) )
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "toggleButton1ActionPerformed", true ) )
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "toggleButton1ActionPerformed", true ) )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"size": new java.awt.Dimension( 440, 555 )
+			"location": new java.awt.Point( 30, 5 )
+		} )
+	}
+}

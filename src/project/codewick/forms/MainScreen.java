@@ -12,13 +12,17 @@ import javax.swing.GroupLayout;
  * @author Vaishnav Anil Nair
  */
 public class MainScreen extends JFrame {
-    public MainScreen() {
-        initComponents();
-    }
+    private MainScreen() { initComponents();}
+    static MainScreen instance;
+    public static MainScreen getInstance(){
+        if(instance == null)instance = new MainScreen();
+        return instance;
+}
+
 
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
-        // Generated using JFormDesigner Evaluation license - Vaishnav Anil Nair
+        // Generated using JFormDesigner Evaluation license - Anfaas qureshi
         button1 = new JButton();
         button2 = new JButton();
         button9 = new JButton();
@@ -28,7 +32,7 @@ public class MainScreen extends JFrame {
 
         //======== this ========
         setTitle("Login Selection");
-        Container contentPane = getContentPane();
+        var contentPane = getContentPane();
 
         //---- button1 ----
         button1.setText("New patient");
@@ -86,7 +90,7 @@ public class MainScreen extends JFrame {
     }
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
-    // Generated using JFormDesigner Evaluation license - Vaishnav Anil Nair
+    // Generated using JFormDesigner Evaluation license - Anfaas qureshi
     private JButton button1;
     private JButton button2;
     private JButton button9;

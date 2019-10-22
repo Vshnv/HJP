@@ -1,20 +1,31 @@
 package project.codewick;
 
+import project.codewick.forms.MainScreen;
+import project.codewick.forms.doctor.interfaces.DoctorInterface;
 import project.codewick.forms.patient.ExistingPatientLogin;
-import project.codewick.forms.patient.NewPatientform;
-import project.codewick.utils.SQL;
+import project.codewick.forms.patient.interfaces.PatientInterface;
+import project.codewick.forms.patient.interfaces.patient_info1;
 
 import javax.swing.*;
 
 public class Codewick {
-    public static void main(String[] args){
-        String[] arg = {"test","test2"};
-        System.out.println(args);
-        SQL.utils.setup("Vaishnav","19BCG10015","hospitalmanagement");
-        NewPatientform form = new NewPatientform();
-        form.setVisible(true);
-        ExistingPatientLogin a = new ExistingPatientLogin();
-        a.setVisible(true);
-         a.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+    public  static void insert()
+    {
+
     }
+
+    public static void main(String[] args){
+    insert();
+     //   SQL.utils.setup("Vaishnav","19BCG10015","hospitalmanagement");
+        //ExistingPatientLogin a = new ExistingPatientLogin();
+        patient_info1 doc = patient_info1.getInstance();
+        //a.setVisible(false);
+        //doc.setVisible(true);
+        DoctorInterface d = DoctorInterface.getInstance();
+        d.setVisible(true);
+
+
+        //a.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        }
+
 }

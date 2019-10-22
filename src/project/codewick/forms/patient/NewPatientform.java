@@ -43,7 +43,7 @@ public class NewPatientform extends JFrame {
 
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
-        // Generated using JFormDesigner Evaluation license - Vaishnav Anil Nair
+        // Generated using JFormDesigner Evaluation license - Anfaas qureshi
         button1 = new JButton();
         label1 = new JLabel();
         label2 = new JLabel();
@@ -247,7 +247,7 @@ public class NewPatientform extends JFrame {
     }
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
-    // Generated using JFormDesigner Evaluation license - Vaishnav Anil Nair
+    // Generated using JFormDesigner Evaluation license - Anfaas qureshi
     private JButton button1;
     private JLabel label1;
     private JLabel label2;

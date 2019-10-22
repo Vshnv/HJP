@@ -33,7 +33,7 @@ public class DoctorLogin extends JFrame {
 
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
-        // Generated using JFormDesigner Evaluation license - Vaishnav Anil Nair
+        // Generated using JFormDesigner Evaluation license - Anfaas qureshi
         label1 = new JLabel();
         label2 = new JLabel();
         textField1 = new JTextField();
@@ -44,7 +44,7 @@ public class DoctorLogin extends JFrame {
 
         //======== this ========
         setTitle("Medical Practitioner's Login");
-        Container contentPane = getContentPane();
+        var contentPane = getContentPane();
 
         //---- label1 ----
         label1.setText("User ID");
@@ -115,7 +115,7 @@ public class DoctorLogin extends JFrame {
     }
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
-    // Generated using JFormDesigner Evaluation license - Vaishnav Anil Nair
+    // Generated using JFormDesigner Evaluation license - Anfaas qureshi
     private JLabel label1;
     private JLabel label2;
     private JTextField textField1;

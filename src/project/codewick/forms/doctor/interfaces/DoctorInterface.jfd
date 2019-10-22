@@ -1,17 +1,26 @@
-JFDML JFormDesigner: "7.0.0.6.255" Java: "1.8.0_152-release" encoding: "UTF-8"
+JFDML JFormDesigner: "7.0.0.6.255" Java: "11.0.4" encoding: "UTF-8"
 
 new FormModel {
 	contentType: "form/swing"
 	root: new FormRoot {
 		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-			"$horizontalGroup": "par l {seq l {space :p:14:p, comp button1:::p:99:p, space u:::p, comp button2:::p:99:p, space :::p, comp button3:::p:99:p, space ::14:x}}"
-			"$verticalGroup": "par l {seq {space :p:17:p, par b {comp button2::b:p:93:p, comp button3::b:p:93:p, comp button1::b:p:93:p}, space ::18:x}}"
+			"$horizontalGroup": "par l {seq {space :p:14:p, par t {seq {comp button1:::p:105:p, space :::p, comp button2:::p:99:p, space :::p, comp button3:::p:99:p}, comp test:::p:143:p}, space ::144:x}}"
+			"$verticalGroup": "par l {seq {space :p:17:p, par b {comp button2::b:p:93:p, comp button3::b:p:93:p, comp button1::b:p:93:p}, space :p:56:p, comp test:::p::p, space ::70:x}}"
 		} ) {
 			name: "this"
 			"title": "Medical Practitioners interface"
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button1"
 				"text": "Patient Records"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button1ActionPerformed", true ) )
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button1ActionPerformed", true ) )
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button1ActionPerformed", true ) )
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button1ActionPerformed", true ) )
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button1ActionPerformed", true ) )
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button1ActionPerformed", true ) )
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button1ActionPerformed", true ) )
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button1ActionPerformed", true ) )
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button1ActionPerformed", true ) )
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button2"
@@ -21,9 +30,12 @@ new FormModel {
 				name: "button3"
 				"text": "Duty Roster"
 			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "test"
+			} )
 		}, new FormLayoutConstraints( null ) {
-			"location": new java.awt.Point( 85, 135 )
-			"size": new java.awt.Dimension( 345, 160 )
+			"location": new java.awt.Point( 75, 55 )
+			"size": new java.awt.Dimension( 475, 290 )
 		} )
 	}
 }

@@ -4,7 +4,12 @@
 
 package project.codewick.forms.patient.interfaces;
 
+import project.codewick.forms.doctor.interfaces.DoctorInterface;
+import project.codewick.utils.SQL;
+
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.*;
 import javax.swing.GroupLayout;
 
@@ -78,6 +83,13 @@ public class PatientInterface extends JFrame {
         pack();
         setLocationRelativeTo(getOwner());
         // JFormDesigner - End of component initialization  //GEN-END:initComponents
+        button1.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent e){
+             //   SQL.utils.insertValue("your code here for displaying data of patient","patientInfo",colmns);
+                patient_info1 patient_info= patient_info1.getInstance();
+                patient_info.setVisible(true);
+            }
+        });
     }
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
