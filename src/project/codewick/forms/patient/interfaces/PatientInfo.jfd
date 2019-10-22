@@ -1,0 +1,96 @@
+JFDML JFormDesigner: "7.0.0.6.255" Java: "11.0.4" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {space :0:458:x};par l {seq {space :0:0:x, par l {seq {space :38:38:p, comp label9:::p::p, space :18:18:p, comp comboBox1:::p::p}, seq {comp label1:::p::p, space :89:89:p, comp label17:::p:150:p}, seq {space :1:1:p, comp label2:::p:35:p, space :89:89:p, comp label18:::p:150:p}, seq {comp label3:::p::p, space :103:103:p, comp label19:::p:150:p}, seq {space :3:3:p, comp label4:::p::p, space :53:53:p, comp label20:::p:150:p}, seq {space :3:3:p, comp label5:::p:71:p, space :51:51:p, comp label21:::p:261:p}, seq {space :3:3:p, comp label6:::p::p, space :60:60:p, comp label22:::p:261:p}, seq {space :3:3:p, comp label7:::p::p, space :33:33:p, comp label23:::p:261:p}, seq {space :3:3:p, comp label8:::p::p, space :18:18:p, comp label24:::p:261:p}, seq {space :133:133:p, comp toggleButton1:::p:94:p}}, space :0:0:x}}"
+			"$verticalGroup": "par l {space :0:441:x};par l {seq {space :0:0:x, par l {seq {space :7:7:p, comp label9:::p::p}, comp comboBox1:::p::p}, space :21:21:p, par l {comp label1:::p::p, comp label17:::p::p}, space :18:18:p, par l {comp label2:::p::p, comp label18:::p::p}, space :18:18:p, par l {comp label3:::p::p, comp label19:::p::p}, space :18:18:p, par l {comp label4:::p::p, comp label20:::p::p}, space :18:18:p, par l {comp label5:::p::p, comp label21:::p::p}, space :18:18:p, par l {comp label6:::p::p, comp label22:::p::p}, space :18:18:p, par l {comp label7:::p::p, comp label23:::p::p}, space :12:12:p, par l {comp label8:::p::p, comp label24:::p::p}, space :41:41:p, comp toggleButton1:::p::p, space :0:0:x}}"
+		} ) {
+			name: "this"
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label9"
+				"text": "User ID"
+			} )
+			add( new FormComponent( "javax.swing.JComboBox" ) {
+				name: "comboBox1"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label17"
+				"text": "text"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label1"
+				"text": "Name"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label2"
+				"text": "Age"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label3"
+				"text": "Sex"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label4"
+				"text": "Nationality"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label5"
+				"text": "DOB"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label6"
+				"text": "Phone no."
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label7"
+				"text": "Email Address"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label8"
+				"text": "Locality Address"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label18"
+				"text": "text"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label19"
+				"text": "text"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label20"
+				"text": "text"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label21"
+				"text": "text"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label22"
+				"text": "text"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label23"
+				"text": "text"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label24"
+				"text": "text"
+			} )
+			add( new FormComponent( "javax.swing.JToggleButton" ) {
+				name: "toggleButton1"
+				"text": "BACK"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "toggleButton1ActionPerformed", true ) )
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "toggleButton1ActionPerformed", true ) )
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "toggleButton1ActionPerformed", true ) )
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "toggleButton1ActionPerformed", true ) )
+				addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "toggleButton1MouseClicked", true ) )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 460, 465 )
+		} )
+	}
+}

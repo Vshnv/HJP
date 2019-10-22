@@ -4,6 +4,7 @@
 
 package project.codewick.forms.doctor.interfaces;
 
+import project.codewick.forms.patient.interfaces.PatientInfo;
 import project.codewick.forms.patient.interfaces.patient_info1;
 import project.codewick.utils.SQL;
 
@@ -27,8 +28,14 @@ public class DoctorInterface extends JFrame {
         return instance;
     }
     private void button1ActionPerformed(ActionEvent e) {
-        patient_info1 p =patient_info1.getInstance();
+        PatientInfo p = PatientInfo.getInstance();
         p.setVisible(true);
+        setVisible(false);
+    }
+
+    private void button3ActionPerformed(ActionEvent e) {
+        Dutyroster r = Dutyroster.();
+        r.setVisible(true);
         setVisible(false);
     }
 
@@ -65,6 +72,10 @@ public class DoctorInterface extends JFrame {
 
         //---- button3 ----
         button3.setText("Duty Roster");
+        button3.addActionListener(e -> {
+			button3ActionPerformed(e);
+			button3ActionPerformed(e);
+		});
 
         GroupLayout contentPaneLayout = new GroupLayout(contentPane);
         contentPane.setLayout(contentPaneLayout);
@@ -88,8 +99,8 @@ public class DoctorInterface extends JFrame {
                     .addGap(17, 17, 17)
                     .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
                         .addComponent(button2, GroupLayout.PREFERRED_SIZE, 93, GroupLayout.PREFERRED_SIZE)
-                        .addComponent(button3, GroupLayout.PREFERRED_SIZE, 93, GroupLayout.PREFERRED_SIZE)
-                        .addComponent(button1, GroupLayout.PREFERRED_SIZE, 93, GroupLayout.PREFERRED_SIZE))
+                        .addComponent(button1, GroupLayout.PREFERRED_SIZE, 93, GroupLayout.PREFERRED_SIZE)
+                        .addComponent(button3, GroupLayout.PREFERRED_SIZE, 93, GroupLayout.PREFERRED_SIZE))
                     .addGap(56, 56, 56)
                     .addComponent(test, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(70, Short.MAX_VALUE))
@@ -100,7 +111,7 @@ public class DoctorInterface extends JFrame {
         button1.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
                         //SQL.utils.insertValue("your code here for displaying data of patient","patientInfo",colmns);
-                    patient_info1.getInstance().setVisible(true);
+                    PatientInfo.getInstance().setVisible(true);
                     setVisible(false);
             }
         });

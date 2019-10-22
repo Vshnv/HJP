@@ -23,7 +23,7 @@ public class PatientInterface extends JFrame {
 
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
-        // Generated using JFormDesigner Evaluation license - Vaishnav Anil Nair
+        // Generated using JFormDesigner Evaluation license - Anfaas qureshi
         button1 = new JButton();
         button2 = new JButton();
         button3 = new JButton();
@@ -32,7 +32,7 @@ public class PatientInterface extends JFrame {
 
         //======== this ========
         setTitle("Patients Interface");
-        Container contentPane = getContentPane();
+        var contentPane = getContentPane();
 
         //---- button1 ----
         button1.setText(" Appointments");
@@ -59,9 +59,9 @@ public class PatientInterface extends JFrame {
                         .addComponent(button3, GroupLayout.DEFAULT_SIZE, 425, Short.MAX_VALUE)
                         .addGroup(contentPaneLayout.createSequentialGroup()
                             .addComponent(button1, GroupLayout.PREFERRED_SIZE, 99, GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(button2, GroupLayout.PREFERRED_SIZE, 99, GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(button2, GroupLayout.PREFERRED_SIZE, 99, GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
                             .addComponent(button4, GroupLayout.PREFERRED_SIZE, 99, GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                             .addComponent(button5, GroupLayout.DEFAULT_SIZE, 104, Short.MAX_VALUE)))
@@ -73,12 +73,12 @@ public class PatientInterface extends JFrame {
                     .addGap(16, 16, 16)
                     .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
                         .addComponent(button1, GroupLayout.PREFERRED_SIZE, 93, GroupLayout.PREFERRED_SIZE)
-                        .addComponent(button2, GroupLayout.PREFERRED_SIZE, 93, GroupLayout.PREFERRED_SIZE)
                         .addComponent(button4, GroupLayout.PREFERRED_SIZE, 93, GroupLayout.PREFERRED_SIZE)
-                        .addComponent(button5, GroupLayout.PREFERRED_SIZE, 93, GroupLayout.PREFERRED_SIZE))
+                        .addComponent(button5, GroupLayout.PREFERRED_SIZE, 93, GroupLayout.PREFERRED_SIZE)
+                        .addComponent(button2, GroupLayout.PREFERRED_SIZE, 93, GroupLayout.PREFERRED_SIZE))
                     .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                     .addComponent(button3)
-                    .addContainerGap(18, Short.MAX_VALUE))
+                    .addContainerGap(26, Short.MAX_VALUE))
         );
         pack();
         setLocationRelativeTo(getOwner());
@@ -86,14 +86,14 @@ public class PatientInterface extends JFrame {
         button1.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
              //   SQL.utils.insertValue("your code here for displaying data of patient","patientInfo",colmns);
-                patient_info1 patient_info= patient_info1.getInstance();
+                PatientInfo patient_info= PatientInfo.getInstance();
                 patient_info.setVisible(true);
             }
         });
     }
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
-    // Generated using JFormDesigner Evaluation license - Vaishnav Anil Nair
+    // Generated using JFormDesigner Evaluation license - Anfaas qureshi
     private JButton button1;
     private JButton button2;
     private JButton button3;

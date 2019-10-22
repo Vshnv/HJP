@@ -3,6 +3,7 @@ package project.codewick;
 import project.codewick.forms.MainScreen;
 import project.codewick.forms.doctor.interfaces.DoctorInterface;
 import project.codewick.forms.patient.ExistingPatientLogin;
+import project.codewick.forms.patient.interfaces.PatientInfo;
 import project.codewick.forms.patient.interfaces.PatientInterface;
 import project.codewick.forms.patient.interfaces.patient_info1;
 
@@ -18,7 +19,7 @@ public class Codewick {
     insert();
      //   SQL.utils.setup("Vaishnav","19BCG10015","hospitalmanagement");
         //ExistingPatientLogin a = new ExistingPatientLogin();
-        patient_info1 doc = patient_info1.getInstance();
+        PatientInfo doc = PatientInfo.getInstance();
         //a.setVisible(false);
         //doc.setVisible(true);
         DoctorInterface d = DoctorInterface.getInstance();

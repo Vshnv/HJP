@@ -1,0 +1,82 @@
+JFDML JFormDesigner: "7.0.0.6.255" Java: "11.0.4" encoding: "UTF-8"
+
+new FormModel {
+	"i18n.autoExternalize": true
+	"i18n.bundlePackage": "project.codewick.forms.patient.interfaces"
+	"i18n.bundleName": "patient"
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq l {space :p:35:p, par l {comp label1:::::x, comp label17:::::x}, space s:::p, par l:::p {comp label3:::::x, comp label18:::::x}, space :p:18:p, par t:::p {comp label19:::::x, comp label4:::::x}, space :::p, par l:::p {comp label16:::::x, comp label20:::::x}, space :::p, comp label8:::p::p, par l {seq {space :p:42:p, comp label2:::p::p}, seq l {space s:::p, par l:::p {comp label5:::::x, comp label21:::::x}}}, space :p:18:p, par l:::p {comp label6:::::x, comp label22:::::x}, space s:::p, par l:::p {comp label23::::62:x, comp label7::::62:x}, space :p:47:p}}"
+			"$verticalGroup": "par l {seq l {space :::p, par b {comp label2::b:p::p, comp label3::b:p:16:p, comp label1::b:p:16:p, comp label4::b:p::p, comp label16::b:p::p, comp label5::b:p::p, comp label6::b:p:16:p, comp label7::b:p:24:p}, space s:::p, par l {comp label8:::p::p, par b:l {comp label21::b:p::p, comp label22::b:p::p, comp label23::b:p::p}, par b {comp label17::b:p::p, comp label18::b:p::p, comp label19::b:p::p, comp label20::b:p::p}}, space ::67:x}}"
+		} ) {
+			name: "this"
+			"title": new FormMessage( null, "this.title" )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label1"
+				"text": new FormMessage( null, "label1.text_2" )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label2"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label3"
+				"text": new FormMessage( null, "label3.text_2" )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label4"
+				"text": new FormMessage( null, "label4.text_2" )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label5"
+				"text": new FormMessage( null, "label5.text_2" )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label6"
+				"text": new FormMessage( null, "label6.text_2" )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label7"
+				"text": new FormMessage( null, "label7.text_2" )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label8"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label16"
+				"text": new FormMessage( null, "label16.text" )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label17"
+				"text": new FormMessage( null, "label17.text_2" )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label18"
+				"text": new FormMessage( null, "label18.text_2" )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label19"
+				"text": new FormMessage( null, "label19.text_2" )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label20"
+				"text": new FormMessage( null, "label20.text_2" )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label21"
+				"text": new FormMessage( null, "label21.text_2" )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label22"
+				"text": new FormMessage( null, "label22.text_2" )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label23"
+				"text": new FormMessage( null, "label23.text_2" )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 15, 25 )
+			"size": new java.awt.Dimension( 605, 155 )
+		} )
+	}
+}

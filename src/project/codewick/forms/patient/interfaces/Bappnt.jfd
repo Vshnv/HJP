@@ -1,0 +1,47 @@
+JFDML JFormDesigner: "7.0.0.6.255" Java: "11.0.4" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq {space :::p, par l {seq l {comp label1:::p::p, space ::243:x}, seq t {par t {seq l {space :p:144:p, comp button1:::p::p, space :0:0:x}, seq l {comp label2:::p::p, space ::193:x, comp comboBox1:::p::p}, seq t {par l {comp label3::l:p::p, comp label4::l:p::p}, space ::185:x, par l {comp textField1:::p::p, comp comboBox2:::p::p}}}, space :22:22:p}}}}"
+			"$verticalGroup": "par l {seq l {space :::p, comp label1:::p::p, space ::13:x, par b {comp label4::b:p::p, comp textField1::b:p::p}, space s:::p, par b {comp label3::b:p::p, comp comboBox2::b:p::p}, space :p:46:p, par b {comp label2::b:p::p, comp comboBox1::b:p::p}, space :p:50:p, comp button1:::p::p, space :p:32:p}}"
+		} ) {
+			name: "this"
+			"title": "BOOKING APPOINTMENT"
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label1"
+				"text": "Book your Appointment"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label2"
+				"text": "Select Doctor"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label3"
+				"text": "Select Timings"
+			} )
+			add( new FormComponent( "javax.swing.JComboBox" ) {
+				name: "comboBox1"
+			} )
+			add( new FormComponent( "javax.swing.JComboBox" ) {
+				name: "comboBox2"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button1"
+				"text": "Confirm"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label4"
+				"text": "Select Date"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textField1"
+				"text": "Enter Date"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 120, 35 )
+			"size": new java.awt.Dimension( 400, 325 )
+		} )
+	}
+}

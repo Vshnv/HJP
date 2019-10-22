@@ -31,18 +31,12 @@ public class patient_info1 extends JFrame {
         return instance;
     }
     private void button1MouseClicked(MouseEvent e) {
-        // TODO add your code here
+
     }
 
     private void toggleButton1ActionPerformed(ActionEvent e) {
        // patient_info1 p= new patient_info1();
        // p.setVisible(false);
-       setVisible(false);
-       MainScreen m =  MainScreen.getInstance();
-      m.setVisible(true);
-
-
-
     }
 
     private void initComponents() {
@@ -178,10 +172,10 @@ public class patient_info1 extends JFrame {
                                             .addComponent(label18, GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
                                             .addComponent(label17, GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE))
                                         .addContainerGap(129, Short.MAX_VALUE))))))
-                    .addGroup(GroupLayout.Alignment.TRAILING, this2ContentPaneLayout.createSequentialGroup()
-                        .addContainerGap(167, Short.MAX_VALUE)
+                    .addGroup(this2ContentPaneLayout.createSequentialGroup()
+                        .addGap(167, 167, 167)
                         .addComponent(toggleButton1, GroupLayout.PREFERRED_SIZE, 94, GroupLayout.PREFERRED_SIZE)
-                        .addGap(177, 177, 177))
+                        .addGap(0, 177, Short.MAX_VALUE))
             );
             this2ContentPaneLayout.setVerticalGroup(
                 this2ContentPaneLayout.createParallelGroup()
@@ -222,9 +216,9 @@ public class patient_info1 extends JFrame {
                         .addGroup(this2ContentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
                             .addComponent(label8)
                             .addComponent(label24))
-                        .addGap(47, 47, 47)
+                        .addGap(41, 41, 41)
                         .addComponent(toggleButton1)
-                        .addContainerGap(149, Short.MAX_VALUE))
+                        .addContainerGap(155, Short.MAX_VALUE))
             );
             this2.pack();
             this2.setLocationRelativeTo(this2.getOwner());
