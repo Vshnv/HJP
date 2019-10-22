@@ -5,6 +5,7 @@
 package project.codewick.forms.patient;
 
 import java.awt.*;
+import java.awt.event.*;
 import javax.swing.*;
 import javax.swing.GroupLayout;
 
@@ -16,15 +17,20 @@ public class ExistingPatientLogin extends JFrame {
         initComponents();
     }
 
+    private void button1MouseClicked(MouseEvent e) {
+        String user = textField1.getText();
+        String password = String.valueOf(passwordField1.getPassword());
+    }
+
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
         // Generated using JFormDesigner Evaluation license - Vaishnav Anil Nair
         label1 = new JLabel();
         label2 = new JLabel();
         textField1 = new JTextField();
-        textField2 = new JTextField();
         button1 = new JButton();
         button2 = new JButton();
+        passwordField1 = new JPasswordField();
 
         //======== this ========
         setTitle("Patient Login");
@@ -38,6 +44,12 @@ public class ExistingPatientLogin extends JFrame {
 
         //---- button1 ----
         button1.setText("Login");
+        button1.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                button1MouseClicked(e);
+            }
+        });
 
         //---- button2 ----
         button2.setText("Back");
@@ -58,9 +70,9 @@ public class ExistingPatientLogin extends JFrame {
                                 .addComponent(label2)
                                 .addComponent(label1))
                             .addGap(18, 18, 18)
-                            .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.TRAILING)
-                                .addComponent(textField1, GroupLayout.PREFERRED_SIZE, 281, GroupLayout.PREFERRED_SIZE)
-                                .addComponent(textField2, GroupLayout.PREFERRED_SIZE, 280, GroupLayout.PREFERRED_SIZE))))
+                            .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
+                                .addComponent(textField1, GroupLayout.DEFAULT_SIZE, 281, Short.MAX_VALUE)
+                                .addComponent(passwordField1, GroupLayout.DEFAULT_SIZE, 281, Short.MAX_VALUE))))
                     .addContainerGap(17, Short.MAX_VALUE))
         );
         contentPaneLayout.setVerticalGroup(
@@ -70,15 +82,15 @@ public class ExistingPatientLogin extends JFrame {
                     .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
                         .addComponent(textField1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
                         .addComponent(label1))
-                    .addGap(27, 27, 27)
+                    .addGap(32, 32, 32)
                     .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
                         .addComponent(label2)
-                        .addComponent(textField2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+                        .addComponent(passwordField1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
                     .addGap(18, 18, 18)
                     .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
                         .addComponent(button2)
                         .addComponent(button1))
-                    .addContainerGap(15, Short.MAX_VALUE))
+                    .addContainerGap(10, Short.MAX_VALUE))
         );
         pack();
         setLocationRelativeTo(getOwner());
@@ -90,8 +102,8 @@ public class ExistingPatientLogin extends JFrame {
     private JLabel label1;
     private JLabel label2;
     private JTextField textField1;
-    private JTextField textField2;
     private JButton button1;
     private JButton button2;
+    private JPasswordField passwordField1;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
 }
