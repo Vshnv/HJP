@@ -1,0 +1,37 @@
+JFDML JFormDesigner: "7.0.0.6.255" Java: "1.8.0_152-release" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq t {space :::p, par t {comp button3::::425:x, seq {comp button1:::p:99:p, space u:::p, comp button2:::p:99:p, space :::p, comp button4:::p:99:p, space :::p, comp button5::::104:x}}, space :p:12:p}}"
+			"$verticalGroup": "par l {seq l {space :p:16:p, par b {comp button1::b:p:93:p, comp button2::b:p:93:p, comp button4::b:p:93:p, comp button5::b:p:93:p}, space :::p, comp button3:::p::p, space ::18:x}}"
+		} ) {
+			name: "this"
+			"title": "Patients Interface"
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button1"
+				"text": " Appointments"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button2"
+				"text": "History"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button3"
+				"text": "Book Appointment"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button4"
+				"text": "Doctors Info"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button5"
+				"text": "Medical Notes"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 440, 195 )
+		} )
+	}
+}

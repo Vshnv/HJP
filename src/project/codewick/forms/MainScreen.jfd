@@ -1,0 +1,41 @@
+JFDML JFormDesigner: "7.0.0.6.255" Java: "1.8.0_152-release" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq l {space :p:17:p, comp button1:::p:99:p, space u:::p, comp button2:::p:99:p, space :p:12:p, comp button10:::p:99:p, space u:::p, comp button14:::p:99:p, space :p:12:p, comp button9:::p:99:p, space u:::p, comp button13:::p:99:p, space ::22:x}}"
+			"$verticalGroup": "par l {seq l {space :p:34:p, par b {comp button1::b:p:93:p, comp button2::b:p:93:p, comp button10::b:p:93:p, comp button13::b:p:93:p, comp button14::b:p:93:p, comp button9::b:p:93:p}, space ::31:x}}"
+		} ) {
+			name: "this"
+			"title": "Login Selection"
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button1"
+				"text": "New patient"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button2"
+				"text": "Existing patient"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button9"
+				"text": "Admin Login"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button10"
+				"text": "Doctor's Login"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button13"
+				"text": "Exit"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button14"
+				"text": "Staff Login"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 20 )
+			"size": new java.awt.Dimension( 695, 190 )
+		} )
+	}
+}

@@ -1,0 +1,39 @@
+JFDML JFormDesigner: "7.0.0.6.255" Java: "1.8.0_152-release" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq l {par t:::p {seq t {space ::210:x, comp button1:::p::p, space :::p, comp button2:::p::p}, seq l {par l {seq {space :p:38:p, comp label1:::p::p}, seq t {space :::p, comp label2:::p::p}}, space u:::p, par l:::p {comp textField1::::285:x, comp textField2::::285:x}}}, space ::26:x}}"
+			"$verticalGroup": "par l {seq l {space :p:23:p, par b {comp textField1::b:p::p, comp label1::b:p::p}, space u:::p, par b {comp textField2::b:p::p, comp label2::b:p::p}, space :::p, par b {comp button2::b:p::p, comp button1::b:p::p}, space ::12:x}}"
+		} ) {
+			name: "this"
+			"title": "Administrator Login"
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label1"
+				"text": "User ID"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label2"
+				"text": "Password"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textField1"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textField2"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button1"
+				"text": "Login"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button2"
+				"text": "Back"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 400, 175 )
+		} )
+	}
+}

@@ -1,0 +1,39 @@
+JFDML JFormDesigner: "7.0.0.6.255" Java: "1.8.0_152-release" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq {space :p:32:p, par t {seq {comp button1:::p::p, space :::p, comp button2:::p::p}, seq {par t {comp label2:::p::p, comp label1:::p::p}, space s:::p, par t {comp textField1:::p:281:p, comp textField2:::p:280:p}}}, space ::17:x}}"
+			"$verticalGroup": "par l {seq l {space :p:38:p, par b {comp textField1::b:p::p, comp label1::b:p::p}, space :p:27:p, par b {comp label2::b:p::p, comp textField2::b:p::p}, space s:::p, par b {comp button2::b:p::p, comp button1::b:p::p}, space ::15:x}}"
+		} ) {
+			name: "this"
+			"title": "Patient Login"
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label1"
+				"text": "User ID"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label2"
+				"text": "Password"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textField1"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textField2"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button1"
+				"text": "Login"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button2"
+				"text": "Back"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 400, 220 )
+		} )
+	}
+}
