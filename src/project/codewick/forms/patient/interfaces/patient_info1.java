@@ -47,7 +47,7 @@ public class patient_info1 extends JFrame {
 
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
-        // Generated using JFormDesigner Evaluation license - Anfaas qureshi
+        // Generated using JFormDesigner Evaluation license - Vaishnav Anil Nair
         ResourceBundle bundle = ResourceBundle.getBundle("project.codewick.forms.patient.interfaces.patient");
         this2 = new JFrame();
         label1 = new JLabel();
@@ -234,7 +234,7 @@ public class patient_info1 extends JFrame {
     }
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
-    // Generated using JFormDesigner Evaluation license - Anfaas qureshi
+    // Generated using JFormDesigner Evaluation license - Vaishnav Anil Nair
     private JFrame this2;
     private JLabel label1;
     private JLabel label2;

@@ -4,18 +4,14 @@ new FormModel {
 	contentType: "form/swing"
 	root: new FormRoot {
 		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-			"$horizontalGroup": "par l {seq t {space :::p, par t {comp button3::::425:x, seq {comp button1:::p:99:p, space u:::p, comp button2:::p:99:p, space :::p, comp button4:::p:99:p, space :::p, comp button5::::104:x}}, space :p:12:p}}"
-			"$verticalGroup": "par l {seq l {space :p:16:p, par b {comp button1::b:p:93:p, comp button2::b:p:93:p, comp button4::b:p:93:p, comp button5::b:p:93:p}, space :::p, comp button3:::p::p, space ::18:x}}"
+			"$horizontalGroup": "par l {seq t {space :::p, par t {comp button3::::326:x, seq {comp button1:::p:99:p, space u:::p, comp button4:::p:99:p, space u:::p, comp button5::::104:x}}, space :p:111:p}}"
+			"$verticalGroup": "par l {seq l {space :p:16:p, par b {comp button1::b:p:93:p, comp button4::b:p:93:p, comp button5::b:p:93:p}, space :p:14:p, comp button3:::p::p, space ::10:x}}"
 		} ) {
 			name: "this"
 			"title": "Patients Interface"
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button1"
 				"text": " Appointments"
-			} )
-			add( new FormComponent( "javax.swing.JButton" ) {
-				name: "button2"
-				"text": "History"
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button3"
@@ -31,7 +27,7 @@ new FormModel {
 			} )
 		}, new FormLayoutConstraints( null ) {
 			"location": new java.awt.Point( 0, 0 )
-			"size": new java.awt.Dimension( 440, 195 )
+			"size": new java.awt.Dimension( 340, 195 )
 		} )
 	}
 }

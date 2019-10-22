@@ -1,5 +1,7 @@
 package project.codewick.utils;
 
+import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
 import javax.xml.transform.Result;
 import java.sql.*;
 
@@ -71,8 +73,52 @@ public enum SQL {
         }
         return true;
     }
+    public void fillComboDoctors(JComboBox combo,String tablename){
+        Connection c = connect();
+        ComboBoxModel cbm = combo.getModel();
+        cbm.setSelectedItem("Choose");
+        try {
+            Statement s = c.createStatement();
+            ResultSet rs =s.executeQuery("select name from " + tablename + ";");
+            while(rs.next()){
+                combo.addItem(rs.getString(1));
+            }
+            c.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
 
+    }
 
+    public String getDoctorSpecialization(String name){
+        Connection c = connect();
+        try {
+            Statement s = c.createStatement();
+            ResultSet rs = s.executeQuery("select spec from doctors where name = \""+name+"\"");
+            rs.next();
+            return rs.getString(1);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return "";
+    }
+    public void fillAppointmentTable(JTable table,String tablename,String key){
+        DefaultTableModel model = (DefaultTableModel) table.getModel();
+        for(int a = model.getRowCount()-1;a>=0;a--){
+            model.removeRow(a);
+        }
+        Connection c = connect();
+        try {
+            Statement s = c.createStatement();
+            ResultSet rs = s.executeQuery("select date, visited from " + tablename + " where userID = \"" + key +"\";");
+            while (rs.next()){
+                model.addRow(new Object[]{rs.getString(1),rs.getString(2)});
+            }
+            c.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 
 
     //FOR LOGIN SYSTEM::

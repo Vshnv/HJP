@@ -1,0 +1,46 @@
+JFDML JFormDesigner: "7.0.0.6.255" Java: "1.8.0_152-release" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq {space :::p, par l {seq l {comp label1:::p::p, space u:::p, comp comboBox1::::298:x}, seq {par l {seq l {space :p:44:p, comp label2:::p::p, space u:::p, comp label4:::p::p}, seq l {comp label3:::p::p, space u:::p, comp label5:::p::p}, comp button1::l:p:378:p}, space :0:8:x}}, space :::p}}"
+			"$verticalGroup": "par l {seq l {space :::p, par b {comp label1::b:p::p, comp comboBox1::b:p::p}, space u:::p, par b {comp label2::b:p::p, comp label4::b:p::p}, space u:::p, par t {comp label3:::p::p, comp label5:::p::p}, space s:::p, comp button1:::p::p, space ::33:x}}"
+		} ) {
+			name: "this"
+			"title": "Doctors info"
+			addEvent( new FormEvent( "java.awt.event.WindowFocusListener", "windowGainedFocus", "thisWindowGainedFocus", true ) )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label1"
+				"text": "Select Doctor :"
+			} )
+			add( new FormComponent( "javax.swing.JComboBox" ) {
+				name: "comboBox1"
+				addEvent( new FormEvent( "java.beans.PropertyChangeListener", "propertyChange", "comboBox1PropertyChange", true, "selectedItem" ) )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label2"
+				"text": "Name :"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label3"
+				"text": "Specializations :"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button1"
+				"text": "Check Duty Roster"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label4"
+				"text": "-"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label5"
+				"text": "-"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 5, 0 )
+			"size": new java.awt.Dimension( 400, 205 )
+		} )
+	}
+}
