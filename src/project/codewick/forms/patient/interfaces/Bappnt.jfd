@@ -1,0 +1,58 @@
+JFDML JFormDesigner: "7.0.0.6.255" Java: "1.8.0_152-release" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq {space :::p, par l {seq l {comp label1:::p::p, space :::x}, seq l {comp label5:::p::p, space :0:0:x}, seq t {par l {comp label3::l:p::p, seq l {space :p:144:p, comp button1:::p::p}, comp label2::l:p::p}, space ::50:x, par l {comp comboBox1:::p::p, comp comboBox2:::p::p, comp textField2::l:p::p}, space :p:22:p}}}}"
+			"$verticalGroup": "par l {seq l {space :::p, comp label1:::p::p, space ::21:x, par b {comp label5::b:p::p, comp textField2::b:p:30:p}, space :p:13:p, par b {comp label3::b:p::p, comp comboBox2::b:p::p}, space :p:30:p, par l {comp comboBox1:::p::p, comp label2:::p::p}, space :p:66:p, comp button1:::p::p, space :p:21:p}}"
+		} ) {
+			name: "this"
+			"title": "BOOKING APPOINTMENT"
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label1"
+				"text": "Book your Appointment"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label2"
+				"text": "Select Doctor"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label3"
+				"text": "Select Timings"
+			} )
+			add( new FormComponent( "javax.swing.JComboBox" ) {
+				name: "comboBox1"
+				"model": new javax.swing.DefaultComboBoxModel {
+					selectedItem: "- "
+					addElement( "- " )
+				}
+			} )
+			add( new FormComponent( "javax.swing.JComboBox" ) {
+				name: "comboBox2"
+				"model": new javax.swing.DefaultComboBoxModel {
+					selectedItem: "Morning"
+					addElement( "Morning" )
+					addElement( "Evening" )
+					addElement( "Night" )
+				}
+				addEvent( new FormEvent( "java.beans.PropertyChangeListener", "propertyChange", "comboBox2PropertyChange", true, "selectedItem" ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button1"
+				"text": "Confirm"
+				addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "button1MouseClicked", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label5"
+				"text": "Select Date"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textField2"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 120, 35 )
+			"size": new java.awt.Dimension( 400, 325 )
+		} )
+	}
+}
